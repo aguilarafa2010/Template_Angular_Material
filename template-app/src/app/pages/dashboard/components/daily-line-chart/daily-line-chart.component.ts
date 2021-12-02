@@ -13,6 +13,8 @@ import {
 import { DailyLineChartData, TimeData } from '../../models';
 import { colors } from '../../../../consts';
 import { customTooltip } from '../../consts';
+import * as ApexCharts from 'apexcharts';
+
 
 type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -49,6 +51,10 @@ export class DailyLineChartComponent implements OnInit, AfterViewInit {
   public matSelectFields: typeof matSelectedFields = matSelectedFields;
   public selectedMatSelectValue = matSelectedFields.monthly;
   public colors: typeof colors = colors;
+
+  vinte = 'vinte'
+
+  public teste: [number, string] = [1, this.vinte]
 
   public ngOnInit(): void {
     this.initChart(this.dailyLineChartData.monthlyData, this.dailyLineChartData.labels);
